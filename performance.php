@@ -3,7 +3,7 @@
 
 $size = 1000000;
 
-$repeat = max([1, intval(5000000 / $size)]);
+$repeat = max(array(1, intval(5000000 / $size)));
 $targetArray = range(1, $size);
 
 $functions = include('performance/array.php');
