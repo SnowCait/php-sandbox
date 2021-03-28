@@ -6,9 +6,10 @@ $size = 1000000;
 $repeat = max(array(1, intval(5000000 / $size)));
 $targetArray = range(1, $size);
 
+$function = function ($targetArray) { return []; };
 $s = microtime(true);
 for ($i = 0; $i < $repeat; $i++) {
-    function ($targetArray);
+    $function($targetArray);
 }
 $framework_time = microtime(true) - $s;
 
