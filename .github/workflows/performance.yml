@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php: [7.3, 7.4, 8.0]
+        php: [5.3, 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0, 8.1]
 
     steps:
     - uses: shivammathur/setup-php@b7d1d9c9a92d8d8463ce36d7f60da34d461724f8
