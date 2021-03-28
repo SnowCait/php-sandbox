@@ -6,7 +6,7 @@ $size = 1000000;
 $repeat = max(array(1, intval(5000000 / $size)));
 $targetArray = range(1, $size);
 
-$s microtime(true);
+$s = microtime(true);
 for ($i = 0; $i < $repeat, $i++) {
     function ($targetArray);
 }
