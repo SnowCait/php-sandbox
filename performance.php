@@ -9,11 +9,11 @@ $repeat = max([1, intval(5000000 / $size)]);
 $targetArray = range(1, $size);
 
 $functions = include('performance/array.php');
-foreach ($functions as $function) {
+foreach ($functions as $title => $function) {
     $s = microtime(true);
     for ($i=0; $i < $repeat; $i++) {
         $function($targetArray);
     }
     $t = microtime(true) - $s;
-    printf("%0.4fms\n", $t * 1000 / $repeat);
+    printf("%s: %0.4fms\n", $title, $t * 1000 / $repeat);
 }
