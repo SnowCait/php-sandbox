@@ -5,7 +5,7 @@ function plus1($n) {
     return $n + 1;
 }
 
-return [
+return array(
     'array_map + Closure' => function ($targetArray) {
         return array_map(function($n) { return $n + 1; }, $targetArray);
     },
@@ -13,17 +13,17 @@ return [
         return array_map('plus1', $targetArray);
     },
     'foreach with key' => function ($targetArray) {
-        $buf = [];
+        $buf = array();
         foreach ($targetArray as $k => $v) {
             $buf[$k] = $v + 1;
         }
         return $buf;
     },
     'foreach without key' => function ($targetArray) {
-        $buf = [];
+        $buf = array();
         foreach ($targetArray as $v) {
             $buf[] = $v + 1;
         }
         return $buf;
     },
-];
+);
