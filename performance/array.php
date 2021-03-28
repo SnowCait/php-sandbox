@@ -8,20 +8,20 @@ function plus1(int $n): int {
 }
 
 return [
-    function (array $targetArray): array {
+    'array_map + Closure' => function (array $targetArray): array {
         return array_map(function(int $n): int { return $n + 1; }, $targetArray);
     },
-    function (array $targetArray): array {
+    'array_map + function' => function (array $targetArray): array {
         return array_map('plus1', $targetArray);
     },
-    function (array $targetArray): array {
+    'foreach with key' => function (array $targetArray): array {
         $buf = [];
         foreach ($targetArray as $k => $v) {
             $buf[$k] = $v + 1;
         }
         return $buf;
     },
-    function (array $targetArray): array {
+    'foreach without key' => function (array $targetArray): array {
         $buf = [];
         foreach ($targetArray as $v) {
             $buf[] = $v + 1;
