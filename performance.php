@@ -1,5 +1,5 @@
 <?php
-declare(strict_type=1);
+declare(strict_types=1);
 
 // http://tanakahisateru.hatenablog.jp/entry/2016/05/25/232422
 
