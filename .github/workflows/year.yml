@@ -1,0 +1,17 @@
+name: Year
+
+on:
+  push:
+    paths:
+      - .github/workflows/year.yml
+    branches:
+      - main
+
+jobs:
+  execute:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v3
+      - run: php year.php
