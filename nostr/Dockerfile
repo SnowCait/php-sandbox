@@ -1,2 +1,2 @@
 FROM composer
-RUN apk add gmp-dev && docker-php-ext-install gmp
+RUN install-php-extensions gmp
